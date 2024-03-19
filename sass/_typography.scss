@@ -1,0 +1,134 @@
+@font-face {
+    font-family: "Dana";
+    src: url("../fonts/DanaYadAlefAlefAlef-Normal.eot");
+    src: url("../fonts/DanaYadAlefAlefAlef-Normal.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/DanaYadAlefAlefAlef-Normal.woff") format("woff"),
+         url("../fonts/DanaYadAlefAlefAlef-Normal.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: "Dina";
+    src: url("../fonts/dina-talbal.eot");
+    src: url("../fonts/dina-talbal.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/dina-talbal.woff") format("woff"),
+         url("../fonts/Dina-TalBal.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: "Gan";
+    src: url("../fonts/ganclm_bold-webfront.woff") format("woff"),
+         url("../fonts/ganclm_bold-webfront.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: "Varela";
+    src: url("../fonts/VarelaRound-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: "Yiddish";
+    src: url("../fonts/YiddishkeitAlefAlefAlef-Bold.eot");
+    src: url("../fonts/YiddishkeitAlefAlefAlef-Bold.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/YiddishkeitAlefAlefAlef-Bold.woff") format("woff"),
+         url("../fonts/YiddishkeitAlefAlefAlef-Bold.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: "Simple";
+    src: url("../fonts\simpleclm-bold-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: "Frank";
+    src: url("../fonts/FrankRuhlLibre-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+.satisfy-regular {
+    font-family: "Satisfy", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+  }
+
+
+.hebrew-fonts-1 {
+  font-family: "Dana", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  color: #000;
+}
+
+.hebrew-fonts-2 {
+  font-family: "Dina", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  color: #000;
+}
+
+.hebrew-fonts-3 {
+  font-family: "Gan", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  color: #000;
+}
+
+.hebrew-fonts-4 {
+  font-family: "Varela", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  color: #000;
+}
+
+
+.hebrew-fonts-5 {
+  font-family: "Yiddish", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  color: #000;
+}
+
+.hebrew-fonts-6 {
+  font-family: "Simple", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  color: #000;
+}
+
+.hebrew-fonts-7 {
+  font-family: "Frank", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  color: #000;
+}
+.heading-tertiary {margin-bottom: 2rem;}
+
+.content-headers {color:var(--color-purple-dark);font-weight: 600;font-size: 2.2rem; line-height: 1.4;}
+
+.content-paragraph {color:var(--color-black);font-weight: 400; font-size: 2rem;line-height: 1.7;}
+
+.contact-p {color:var(--color-white);font-weight: 400; font-size: 2rem;line-height: 1.7;text-shadow:1px 1px 2px black;}
+
+.aboutme-header {color:var(--color-purple-dark);font-weight: 600;font-size: 3.5rem;}
+

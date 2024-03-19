@@ -1,0 +1,96 @@
+.content {
+    grid-column: full-start/full-end;
+    background-color: var(--color-off-white);
+    padding: 5rem;
+    display: grid;
+    grid-template-columns: repeat(4, min-content);
+    justify-items: center;
+    gap: 4rem;
+    margin: auto;
+    
+    @media only screen and (max-width: $bp-large) {
+            
+      padding: 3rem 0;
+      gap: 2rem;  
+}
+    @media only screen and (max-width: $bp-phone) {
+            
+        grid-template-columns: repeat(4, max-content);
+}
+    &__img-1 {
+        grid-column: 2/3;
+        width: 100%;
+        object-fit: cover;
+        height: 50vh;
+        float: right;
+
+        @media only screen and (max-width: 800px) {
+            
+            grid-column: 1/-1;
+            padding: 2rem;
+
+           } 
+    }
+
+    &__text-1 {
+
+        grid-column: 3/4;
+        width: 40vw;
+        @media only screen and (max-width: $bp-large) {
+            
+            grid-column: 1/2;
+            padding: 2rem;
+           }
+        @media only screen and (max-width: $bp-phone) {
+            
+            grid-column: 1/-1;
+            grid-row: 2/3;
+            width: 100vw;
+            
+           }  
+        
+    }
+
+    &__img-2 {
+        grid-column: 3/4;
+        width: 100%;
+        object-fit: cover;
+        height: 50vh;
+        float: left;
+
+        @media only screen and (max-width: 800px) {
+            
+            grid-column: 1/-1;
+            grid-row: 3/4;
+            padding: 2rem;
+           }
+           
+        @media only screen and (max-width: $bp-phone) {
+            
+            grid-column: 1/-1;
+            
+            
+           } 
+             
+    }
+    &__text-2 {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        justify-self: start;
+        width: 40vw;
+        padding: 2rem;
+                   
+        @media only screen and (max-width: $bp-phone) {
+            
+            grid-column: 1/-1;
+            grid-row: 4/5;
+            width: 100vw;
+            padding: 2rem;
+            
+           } 
+    }
+
+    & > h3 {
+        line-height: 1.7rem;
+    }
+}

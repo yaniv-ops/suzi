@@ -1,0 +1,73 @@
+:root {
+    --color-primary: #e7c6ff;
+    --color-primary-light: #ffd6ff ;
+    --color-primary-dark: #c8b6ff;
+    --color-purple-dark: #871F78;
+    --color-primary-text: #1b263b;
+
+    --color-black: #000;
+    --color-white: #fff;
+
+    --color-off-white:#FAF9F6;
+
+    --color-light-grey: rgb(236, 234, 234);
+
+    --default-font-size: 1.6rem;
+
+    --bp-largest: 75em // 1200px
+
+    --bp-large: 68.75em;    // 1100px
+    --bp-medium: 56.25em;   // 900px
+    --bp-small: 37.5em;     // 600px
+    --bp-smallest: 31.25em; // 500px
+
+
+}
+
+$bp-largest: 75em;
+$bp-large: 68.75em;
+$bp-small: 42.7em;     // 650px
+$bp-phone: 29.5em; // 450px
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10 px , 10px/16px = 62.5%
+    color:  var(--color-primary);
+
+    @media only screen and (max-width: var(--bp-large)) {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: 'Frank', sans-serif;
+    font-weight: 400;
+    line-height: 1.6rem;
+    padding: 1.5rem;
+
+    @media only screen and (max-width: $bp-small) {
+        padding: 0;
+    }
+    
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 60vh repeat(6, min-content);
+    grid-template-columns:[full-start] minmax(2rem, 1fr) [center-start] 
+    repeat(4,[col-start] minmax(min-content, 28rem) [col-end]) 
+    [center-end] minmax(2rem, 1fr) [full-end];
+    background-color: var(--color-white);
+    background-color: var(--color-off-white);
+}

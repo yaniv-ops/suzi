@@ -1,0 +1,125 @@
+.header {
+    background-color: var(--color-primary-dark);
+    grid-column: full-start/full-end;
+    text-align: center;
+    
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr max-content 1fr;
+    justify-items: center;
+    align-items: center;
+
+    color: #fff;
+    background-image: linear-gradient(#ec93b1c8 , #9374f1bc),url(../imgs/hero.jpg);
+    background-size: cover;
+    background-position: top;
+
+    @media only screen and (max-width: $bp-largest) {
+        grid-template-columns: 1fr min-content 1fr;
+        line-height: normal;   
+    
+}
+
+    &__logo {
+        grid-column: 1/2;
+        font-size: 3.2rem;
+        margin-top: 6rem;
+        font-weight: 400;
+        color: #fff;
+        text-shadow: 1px 1px 2px pink;
+
+        @media only screen and (max-width: $bp-large) {
+            font-size: 2.2rem;
+            margin-right: 8rem; 
+           }
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.5rem;
+            margin-right: 5rem; 
+           }
+
+    }
+
+    &__phone {
+        grid-column: 2/-1;
+        font-size: 2.5rem;
+        margin-top: 2.7rem;
+        justify-self: end;
+        margin-left: 4rem;
+        font-weight: 400;
+        color: #fff;
+        text-shadow: 1px 1px 2px pink;
+
+        @media only screen and (max-width: $bp-large) {
+            font-size: 2.2rem; 
+           }
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.5rem;
+         
+           }
+        }
+
+        &-symbol {
+            transform: rotate(90deg) translateY(-20px);
+            fill:#fff;
+        
+        }
+    
+
+    &__title {
+        grid-column: 2/3;
+        font-size: 4rem;
+        font-weight: 400;
+        color: #fff;
+        text-shadow: 1px 1px 2px pink;
+
+        @media only screen and (max-width: $bp-large) {
+            font-size: 2.8rem; 
+           }
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.8rem; 
+           }
+    }
+
+    &__subtitle {
+        grid-column: 2/3;
+        font-size: 2rem;
+        font-size: 4rem;
+        font-weight: 400;
+        color: #fff;
+        text-shadow: 1px 1px 2px pink;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.3rem; 
+           }
+    }
+
+    &__btn {
+        grid-column: 1/4;
+        font-size: 2rem;
+        background-color: var(--color-white); /* Green */
+        border: none;
+        color: var(--color-purple-dark);
+        padding: 25px 16px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 3rem;
+        margin: auto;
+        cursor: pointer;
+        width: 40%;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+
+        @media only screen and (max-width: 800px) {
+            width: 60%;
+           }
+
+        @media only screen and (max-width: $bp-small) {
+            padding: 15px 6px;
+            font-size: 1.5rem; 
+           }
+    }
+}
