@@ -148,7 +148,9 @@ body {
         padding: 2rem; } }
     @media only screen and (max-width: 29.5em) {
       .content__img-2 {
-        grid-column: 1/-1; } }
+        grid-column: 1/-1;
+        grid-row: 3/4;
+        padding: 2rem; } }
   .content__text-2 {
     grid-column: 2/3;
     grid-row: 2/3;
