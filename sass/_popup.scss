@@ -8,11 +8,7 @@
     z-index: 1000;
     opacity: 0;
     visibility: hidden;
-
-    &:target {
-        opacity: 1;
-        visibility: visible;
-    }
+    transition: all .3s;
 
     &__content {
         @include absCenter;
@@ -23,7 +19,34 @@
         box-shadow: 0 2rem 4rem rgba(114, 138, 100, 0.2);
         border-radius: 3px;
         padding: 2rem;
+        opacity: 0;
+        transform: translate(-50%,-50%) scale(.5);
+        transition: all .4s .2s;
        
+    }
+
+    &__close {
+        &:link, 
+        &:visited {
+            color: black;
+            font-size: 5rem;
+            margin: 5rem 5rem 0 0;
+            text-decoration: none;
+        }
+
+        &-span {
+            font-size: 3rem;
+        }
+    }
+
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:target &__content {
+        opacity: 1;
+        transform: translate(-50%,-50%) scale(1)
     }
 }
 

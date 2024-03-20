@@ -466,7 +466,6 @@ body {
     -webkit-transition-duration: 0.4s;
     /* Safari */
     transition-duration: 0.4s;
-    margin: auto !important;
     transform: translateX(-50%); }
     @media only screen and (max-width: 68.75em) {
       .aboutme__button {
@@ -569,10 +568,8 @@ body {
   background-color: rgba(114, 138, 100, 0.95);
   z-index: 1000;
   opacity: 0;
-  visibility: hidden; }
-  .popup:target {
-    opacity: 1;
-    visibility: visible; }
+  visibility: hidden;
+  transition: all .3s; }
   .popup__content {
     position: absolute;
     top: 50%;
@@ -583,7 +580,23 @@ body {
     background-color: var(--color-off-white);
     box-shadow: 0 2rem 4rem rgba(114, 138, 100, 0.2);
     border-radius: 3px;
-    padding: 2rem; }
+    padding: 2rem;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition: all .4s .2s; }
+  .popup__close:link, .popup__close:visited {
+    color: black;
+    font-size: 5rem;
+    margin: 5rem 5rem 0 0;
+    text-decoration: none; }
+  .popup__close-span {
+    font-size: 3rem; }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }
+  .popup:target .popup__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); }
 
 .form-items {
   list-style-type: none; }

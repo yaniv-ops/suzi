@@ -104,9 +104,10 @@
         font-size: 16px;
         cursor: pointer;
         width: 40%;
+        
         -webkit-transition-duration: 0.4s; /* Safari */
         transition-duration: 0.4s;
-        margin:auto !important;
+        
         transform: translateX(-50%);
 
         @media only screen and (max-width: $bp-large) {
