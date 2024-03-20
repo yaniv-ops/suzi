@@ -21,13 +21,20 @@
     --bp-small: 37.5em;     // 600px
     --bp-smallest: 31.25em; // 500px
 
+    --primary: 0 0% 20%;
+    --form-color-primary: hsl(var(--primary));
+    --color-valid: #6bca6e;
+    --color-invalid: #ac252f;
+    --border-radius: 4px;
 
-}
+  }
 
 $bp-largest: 75em;
 $bp-large: 68.75em;
 $bp-small: 42.7em;     // 650px
 $bp-phone: 29.5em; // 450px
+
+//// FORM VARS
 
 * {
     margin: 0;

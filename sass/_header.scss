@@ -2,7 +2,7 @@
     background-color: var(--color-primary-dark);
     grid-column: full-start/full-end;
     text-align: center;
-    
+    min-height: 100%;
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: 1fr max-content 1fr;
@@ -120,6 +120,10 @@
         @media only screen and (max-width: $bp-small) {
             padding: 15px 6px;
             font-size: 1.5rem; 
+           }
+
+           & a {
+            text-decoration: none;
            }
     }
 }

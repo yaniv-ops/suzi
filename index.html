@@ -22,9 +22,9 @@
            <h1>מיינדפולנס עם סוזי</h1>
         </div>
         <div class="header__subtitle hebrew-fonts-4">
-            קורסים,הרצאות,ומפגשים פרטניים
+            <h3><span>הרצאות, </span><span>קורסים, </span>ומפגשים פרטניים </h3>
         </div>
-        <button class="header__btn">הרשמה לשיחת ייעוץ חינם</button>
+        <button class="header__btn"><a href="#popup">הרשמה לשיחת ייעוץ חינם</a></button>
         
     </header>
     <section class="content">
@@ -65,7 +65,7 @@
     <div class="contact__first">
         <h1 class="contact__first-title">אני פה לעזור במרחק לחיצת כפתור !</h1>
         <h4 class="contact__first-text contact-p hebrew-fonts-3">התקשר/י אליי למספר 0546453362  או לחצ/י למטה כדי לקבוע פגישת ייעוץ.</h4>
-        <button class="contact__first-btn header__btn">קבע/י פגישה כאן</button>
+        <button class="contact__first-btn header__btn"><a href="#popup">קבע/י פגישה כאן</a></button>
     </div>
     <div class="aboutme">
         <img src="imgs/suziprof.png" class="aboutme__img" alt="aboutme picture">
@@ -88,7 +88,7 @@
             <li>אין לי רשימת המתנה כדי שתוכל להתחיל בטיפול במהירות</li> 
             <li>מכוון תוצאות, כך שתוכל לדעת שאתה בכיוון הנכון!</li>   
         </ul>
-            <button class="aboutme__button">קבע/י פגישה ללא עלות</button>
+            <button class="aboutme__button"><a href="#popup">קבע/י פגישה ללא עלות</a></button>
     </div>
     <section class="reviews">
         <div class="review review-1">
@@ -142,5 +142,78 @@
     <section class="footer">
         FOOTER
     </section>
+    <div class="popup" id="popup">
+        <div class="popup__content">
+            <form action="" method="" id="feedback-form" class="form" novalidate>
+                <fieldset class="form-group">
+                  <legend class="form-legend">הרשמ/י כאן לייעוץ ללא תשלום</legend>
+                  <ul class="form-items">
+                    <p class="form-instructions">חובה למלא שדות המסומנים ב - <span aria-label="required">*</span></p>
+            
+                    <li class=" form-field">
+                      <label for="fname">שם פרטי <span aria-label="required">*</span> </label>
+                      <input type="text" id="fname" name="user_first-name" placeholder="John" required aria-required="true" aria-described-by="firstname-error firstname-status">
+                      <span class=" field-status" id="firstname-status" role="alert" aria-label="valid" aria-live="polite"></span>
+                      <span class="field-message" id="firstname-error" role="alert" aria-live="polite">חובה למלא שדה זה ! ⚠</span>
+                    </li>
+                    <li class="form-field">
+                      <label for="lname">שם משפחה  <span aria-label="required">*</span></label>
+                      <input type="text" id="lname" name="user_last-name" placeholder="Doe" required aria-required="true" aria-described-by="lastname-error lastname-status">
+                      <span class="field-status" id="lastname-status" role="alert" aria-label="valid" aria-live="polite"></span>
+                      <span class="field-message" id="lastname-error" role="alert" aria-live="polite">חובה למלא שדה זה ! ⚠</span>
+                    </li>
+                    <li class="form-field">
+                      <label for="email">כתובת מייל להתקשרות : <span aria-label="required">*</span></label>
+                      <input type="email" id="email" name="user_email" placeholder="john.doe@example.com" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" required>
+                      <span class="field-status" role="alert" id="email-status" aria-label="valid" aria-live="polite"></span>
+                      <span class="field-message" id="email-error" role="alert" aria-live="polite">חובה למלא שדה זה ! ⚠</span>
+                    </li>
+                    <li class=" form-field">
+                        <label for="phone">מספר טלפון</label>
+                        <input type="tel" id="phone" name="phone-number" placeholder="phone" pattern="[0-9]{10}">
+                        <span class=" field-status" id="phone-status" role="alert" aria-label="valid" aria-live="polite"></span>
+                        <span class="field-message" id="phone-error" role="alert" aria-live="polite">חובה למלא שדה זה ! ⚠</span>
+                    </li>
+                    <li>
+                      <button type="submit" id="submit-btn" class="form-btn" title="Please fill the required fields" disabled>הירשמ/י</button>
+                    </li>
+                  </ul>
+                </fieldset>
+              </form>
+        </div>
+    </div>
 </body>
+<script>
+const form = document.querySelector("#feedback-form");
+const inputs = document.querySelectorAll("input");
+const btn = document.querySelector("#submit-btn");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  alert("אצור עמך קשר בהקדם");
+  btn.setAttribute("disabled", "true");
+  form.reset();
+});
+
+form.addEventListener("change", (e) => {
+  const enable =
+    Array.from(inputs).filter((input) => {
+      if (input.hasAttribute("required")) {
+        return input.value === "";
+      } else {
+        return (
+          window.getComputedStyle(input.nextElementSibling.nextElementSibling)
+            .display !== "none"
+        );
+      }
+    }).length === 0;
+
+  if (enable) {
+    btn.removeAttribute("disabled");
+  } else {
+    if (btn.hasAttribute("disabled")) return;
+    btn.setAttribute("disabled", "true");
+  }
+});
+</script>
 </html>

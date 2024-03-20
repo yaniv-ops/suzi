@@ -112,7 +112,9 @@
         @media only screen and (max-width: $bp-large) {
             transform: translateX(0);
       }
-        
+       & a {
+        text-decoration: none;
+       } 
     }
 
     & > * {

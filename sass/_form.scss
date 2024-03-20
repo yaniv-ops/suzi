@@ -1,0 +1,126 @@
+.form-items {
+    list-style-type: none;
+}
+
+
+button {
+    appearance: none;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input,
+  label {
+    width: 100%;
+    display: block;
+  }
+  
+  label {
+    font-weight: 500;
+  }
+  
+  input {
+    padding: 0.25rem 2rem 0.25rem 0.5rem;
+    border: 1px solid lightgrey;
+    border-radius: var(--border-radius);
+  
+    &:valid:not(:placeholder-shown) {
+      border-color: var(--color-valid);
+      border-width: calc(0.5 * var(--border-radius));
+      &:focus-visible {
+        outline-color: var(--color-valid);
+        outline-offset: -var(--border-radius);
+      }
+      & + .field-status::before {
+        content: "✅";
+      }
+    }
+    &:user-invalid {
+      border-color: var(--color-invalid);
+      border-width: calc(0.5 * var(--border-radius));
+      &:focus-visible {
+        outline-color: var(--color-invalid);
+        outline-offset: -var(--border-radius);
+      }
+      & + .field-status::before {
+        content: "❌";
+      }
+      & ~ .field-message {
+        display: block;
+      }
+    }
+  }
+
+  .form {
+
+    @include absCenter;
+    margin-inline: auto;
+    width: 80%;
+  }
+
+  .form-group {
+    border-radius: var(--border-radius);
+  }
+
+
+  .form-legend {
+    margin-left: 1rem;
+    padding: 0.5em 1em;
+    background-color: var(--form-color-primary);
+    border-radius: var(--border-radius);
+    color: whitesmoke;
+  }
+  
+  .form-instructions {
+    font-style: italic;
+  }
+  
+  .form-items {
+    padding: 1rem;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .form-field {
+    --gap: 0.25rem;
+    display: grid;
+    gap: var(--gap);
+  }
+
+  .field-message {
+    display: none;
+    font-size: smaller;
+    color: var(--color-invalid);
+  }
+
+  .field-status {
+    position: relative;
+    height: 0;
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0.5em;
+      bottom: var(--gap);
+      translate: 0 -45%;
+      font-size: smaller;
+    }
+  }
+
+
+  .form-btn {
+    padding: 0.5em 1em;
+    background-color: var(--form-color-primary);
+    border-radius: var(--border-radius);
+    color: whitesmoke;
+    &[disabled] {
+      cursor: not-allowed;
+      color: darkgrey;
+      background-color: var(--primary);
+    }
+  }
+
+  
+
+  

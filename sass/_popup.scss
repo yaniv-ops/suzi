@@ -1,0 +1,29 @@
+.popup {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(114, 138, 100, 0.95);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__content {
+        @include absCenter;
+        width: 75%;
+        height: 50rem;
+        
+        background-color: var(--color-off-white);
+        box-shadow: 0 2rem 4rem rgba(114, 138, 100, 0.2);
+        border-radius: 3px;
+        padding: 2rem;
+       
+    }
+}
+
