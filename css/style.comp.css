@@ -302,16 +302,16 @@ body {
   min-height: 100%;
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: 1fr max-content 1fr;
+  grid-template-columns: 1fr 80vw 1fr;
   justify-items: center;
   align-items: center;
   color: #fff;
   background-image: linear-gradient(#ec93b1c8, #9374f1bc), url(../imgs/hero.jpg);
   background-size: cover;
   background-position: top; }
-  @media only screen and (max-width: 75em) {
+  @media only screen and (max-width: 68.75em) {
     .header {
-      grid-template-columns: 1fr max-content 1fr;
+      grid-template-columns: 1fr 100vw 1fr;
       line-height: normal; } }
   .header__logo {
     grid-column: 2/-1;
@@ -328,7 +328,8 @@ body {
         font-size: 2.2rem; } }
     @media only screen and (max-width: 42.7em) {
       .header__logo {
-        font-size: 1.2rem; } }
+        font-size: 1.2rem;
+        padding: 4rem; } }
   .header__phone {
     font-size: 2.5rem;
     font-weight: 400;
@@ -357,7 +358,8 @@ body {
     font-size: 3rem;
     font-weight: 300;
     color: #fff;
-    text-shadow: 1px 1px 2px pink; }
+    text-shadow: 1px 1px 2px pink;
+    padding: 2rem; }
     @media only screen and (max-width: 42.7em) {
       .header__subtitle {
         font-size: 1.3rem; } }
