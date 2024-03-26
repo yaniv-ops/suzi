@@ -20,16 +20,13 @@
 <body class="container hebrew-fonts-3">
     <header class="header">
         <div class="header__logo hebrew-fonts-4">
-            <h2 class="header__logo-en">SUSIE KEINON</h2>
-            <h2>סוזי קנון</h2>    
-        </div>
-        <div class="header__phone hebrew-fonts-4">
-            <h2>0546453362<img class="header__phone-symbol" src="imgs/icons8-phone-50.png" alt=""></h2>
+            <h2>סוזי קנון</h2> 
+            <h2>0546453362</h2>   
         </div>
         <div class="header__title hebrew-fonts-4">
            <h1>מיינדפולנס עם סוזי</h1>
         </div>
-        <div class="header__subtitle hebrew-fonts-7">
+        <div class="header__subtitle hebrew-fonts-4">
             <h3><span>קורסים  בירושלים, </span><span>סדנאות בארץ, </span>ומפגשים פרטניים, גם בזום. </h3>
         </div>
         <a class="header__btn" href="#popup">הרשמה לשיחת ייעוץ חינם</a>
@@ -210,7 +207,7 @@ form.addEventListener("change", (e) => {
 
 $('#feedback-form').on('submit', function(event) {
     event.preventDefault();
-    emailjs.init('G8XGkPazncSMblyH');
+    emailjs.init('Gr8XGkPazncSMblyH');
     emailjs.sendForm('service_odq7v1z', 'template_riurl3a', this)
     .then(function() {
         console.log('SUCCESS!');

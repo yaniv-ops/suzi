@@ -312,35 +312,25 @@ body {
   background-position: top; }
   @media only screen and (max-width: 75em) {
     .header {
-      grid-template-columns: 1fr min-content 1fr;
+      grid-template-columns: 1fr max-content 1fr;
       line-height: normal; } }
   .header__logo {
-    grid-column: 1/2;
+    grid-column: 2/-1;
     font-size: 3.2rem;
-    margin-top: 6rem;
     font-weight: 400;
     color: #fff;
     width: 100%;
-    text-shadow: 1px 1px 2px pink; }
+    text-shadow: 1px 1px 2px pink;
+    display: flex;
+    gap: 2rem; }
     @media only screen and (max-width: 68.75em) {
       .header__logo {
-        font-size: 2.2rem;
-        margin-right: 8rem; } }
+        font-size: 2.2rem; } }
     @media only screen and (max-width: 42.7em) {
       .header__logo {
-        font-size: 1.2rem;
-        margin-right: 2rem; } }
-    .header__logo-en {
-      font-family: "Roboto", sans-serif;
-      font-size: 1em;
-      text-shadow: 0 0 15px pink;
-      margin-bottom: 1.5rem; }
+        font-size: 1.2rem; } }
   .header__phone {
-    grid-column: 2/-1;
     font-size: 2.5rem;
-    margin-top: 2.7rem;
-    justify-self: end;
-    margin-left: 4rem;
     font-weight: 400;
     color: #fff;
     text-shadow: 1px 1px 2px pink; }
@@ -349,15 +339,7 @@ body {
         font-size: 1.8rem; } }
     @media only screen and (max-width: 42.7em) {
       .header__phone {
-        font-size: 1.2rem;
-        margin-left: 0; } }
-    .header__phone-symbol {
-      transform: rotate(90deg) translateY(-20px);
-      fill: #fff; }
-      @media only screen and (max-width: 42.7em) {
-        .header__phone-symbol {
-          width: 3rem;
-          margin-right: 1.5rem; } }
+        font-size: 1.2rem; } }
   .header__title {
     grid-column: 2/3;
     font-size: 4rem;
