@@ -210,16 +210,18 @@ form.addEventListener("change", (e) => {
 
 $('#feedback-form').on('submit', function(event) {
     event.preventDefault();
-    emailjs.init('Gr8XGkPazncSMblyH');
+    emailjs.init('G8XGkPazncSMblyH');
     emailjs.sendForm('service_odq7v1z', 'template_riurl3a', this)
     .then(function() {
         console.log('SUCCESS!');
         alert('נשלח בהצלחה ,אשוב אלייך במהרה');
         $('#feedback-form')[0].reset();
+        btn.setAttribute("disabled","true");
 
     }, function(error) {
         console.log('FAILED...', error);
         alert('משהו השתבש ,נסו שוב בעוד כמה דקות');
+        btn.setAttribute("disabled","true");
 
     });
 });
