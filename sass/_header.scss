@@ -40,10 +40,10 @@
            }
 
            &-en {
-            font-family: "Dancing Script", sans-serif;
+            font-family: "Roboto", sans-serif;
             font-size: 1em;
-            text-shadow: 0 0 15px black;
-            margin-bottom: 2rem;
+            text-shadow: 0 0 15px pink;
+            margin-bottom: 1.5rem;
            }
     }
 
@@ -101,9 +101,8 @@
 
     &__subtitle {
         grid-column: 2/3;
-        font-size: 2rem;
-        font-size: 4rem;
-        font-weight: 400;
+        font-size: 3rem;
+        font-weight: 300;
         color: #fff;
         text-shadow: 1px 1px 2px pink;
 

@@ -8,7 +8,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>ירושלים, ישראל |  mindfulnesswithsusie | קורס מיינדפולנס סדנאות פגישות אישיות</title>
@@ -25,8 +29,8 @@
         <div class="header__title hebrew-fonts-4">
            <h1>מיינדפולנס עם סוזי</h1>
         </div>
-        <div class="header__subtitle hebrew-fonts-4">
-            <h3><span>הרצאות, </span><span>קורסים, </span>ומפגשים פרטניים </h3>
+        <div class="header__subtitle hebrew-fonts-7">
+            <h3><span>קורסים  בירושלים, </span><span>סדנאות בארץ, </span>ומפגשים פרטניים, גם בזום. </h3>
         </div>
         <a class="header__btn" href="#popup">הרשמה לשיחת ייעוץ חינם</a>
         
@@ -38,7 +42,7 @@
             <p class="content-paragraph">אתם דואגים מהמצב הביטחוני, מרגישים מתוחים ועייפים ולא מצליחים להיות נוכחים בחיי היומיום שלכם.
                 אתם מוצפים או מנותקים רגשית ועוברים את החיים על טייס אוטומטי?
                 אתם דואגים לבריאותכם, למצב הכלכלי, לילדים או ולהורים מזדקנים ורמת הלחץ הגיעה לרמה חדשה לגמרי. 
-                <span style="color:#86af49">אתם לא חייבים לחיות ככה.</span></p>
+                <span style="color:#86af49;font-weight:600;">אתם לא חייבים לחיות ככה.</span></p>
         </div>
         <img class="content__img-2" src="imgs/crowd.png" alt="">
         <div class="content__text-2">
@@ -51,7 +55,7 @@
 בעזרת מיינדפולנס בליווי והנחייה של פסיכותרפיסטית ומנחת מיינדפולנס מוסמכת, תלמדו כיצד להתמודד עם לחץ ותגדילו את האנרגיה, פוקוס ושלווה.
 
             </p><p class="content-paragraph">
-            <span style="color:#86af49">
+            <span style="color:#86af49;font-weight:600;">
 עשו צעד ראשון לחיים טובים יותר – לחצו מטה בכפתור &darr;
             </span>
             
@@ -133,7 +137,7 @@
         <a class="contact__first-btn header__btn" href="#popup">הרשמ/י לקבלת ייעוץ חינם</a>
     </div>
     <section class="footer">
-        FOOTER
+        <a href="https://www.blu-ninja.com"><h2>האתר נבנה ע"י בלו-נינג'ה @ 2024</h2></a>
     </section>
     <div class="popup" id="popup">
         <div class="popup__content">
@@ -144,7 +148,7 @@
                   <ul class="form-items">
                     <p class="form-instructions">חובה למלא שדות המסומנים ב - <span aria-label="required">*</span></p>
             
-                    <li class=" form-field">
+                    <li class="form-field">
                       <label for="fname">שם פרטי <span aria-label="required">*</span> </label>
                       <input type="text" id="fname" name="user_first-name" placeholder="John" required aria-required="true" aria-described-by="firstname-error firstname-status">
                       <span class=" field-status" id="firstname-status" role="alert" aria-label="valid" aria-live="polite"></span>
@@ -177,17 +181,11 @@
         </div>
     </div>
 </body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script>
 const form = document.querySelector("#feedback-form");
 const inputs = document.querySelectorAll("input");
 const btn = document.querySelector("#submit-btn");
-
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  alert("אצור עמך קשר בהקדם");
-  btn.setAttribute("disabled", "true");
-  form.reset();
-});
 
 form.addEventListener("change", (e) => {
   const enable =
@@ -208,6 +206,22 @@ form.addEventListener("change", (e) => {
     if (btn.hasAttribute("disabled")) return;
     btn.setAttribute("disabled", "true");
   }
+});
+
+$('#feedback-form').on('submit', function(event) {
+    event.preventDefault();
+    emailjs.init('Gr8XGkPazncSMblyH');
+    emailjs.sendForm('service_odq7v1z', 'template_riurl3a', this)
+    .then(function() {
+        console.log('SUCCESS!');
+        alert('נשלח בהצלחה ,אשוב אלייך במהרה');
+        $('#feedback-form')[0].reset();
+
+    }, function(error) {
+        console.log('FAILED...', error);
+        alert('משהו השתבש ,נסו שוב בעוד כמה דקות');
+
+    });
 });
 </script>
 </html>
